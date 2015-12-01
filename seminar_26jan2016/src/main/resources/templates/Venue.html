@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/mainLayout">
+
+	<head>
+	</head>
+	<body>
+	<div layout:fragment="mainContent">
+		<h1>สถานที่จัดงานสัมมนา</h1>
+		ห้องราชเทวีแกรนด์บอลรูม โรงแรมเอเชีย
+		
+		<h2>แผนที่โรงแรม</h2>
+		<img src="/images/asiabangkok_map_crop.jpg" th:src="@{/images/asiabangkok_map_crop.jpg}"/>
+
+	</div>
+	</body>
+</html>
