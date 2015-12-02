@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/mainLayout">
+
+	<head>
+	</head>
+	<body>
+	<div layout:fragment="mainContent">
+		<h1> รายชื่อบริษัทที่ลงทะเบียนทั้งหมด</h1>
+		<table class="table table-bordered">
+		  	<thead>
+		  		<tr>
+		  			<td>บริษัท</td>
+		  			<td>ที่อยู่</td>
+		  			<td>เบอร์โทรศัพท์</td>
+		  			<td>เบอร์โทรสาร</td>
+		  			<td>Email</td>
+		  			<td>การลงทะเบียน</td>
+		  		</tr>
+		  	</thead>
+		  	<tbody >
+		  	<th:block th:each="org : ${orgs}">
+		  	 <tr>
+		        <td th:text="${org.name}">Onions</td>
+		        <td th:text="${org.address1 + ' ' + org.address2}">yes</td>
+		        <td th:text="${org.telephone}">yes</td>
+		        <td th:text="${org.fax}">yes</td>
+		        <td th:text="${org.email}">yes</td>
+		        <td th:text="${org.status}">2.41</td>
+		      </tr>
+		      	<th:block th:each="person : ${org.people}">
+			      <tr>
+			      	<td colspan="6" style="padding-left: 20px;"> <span th:text="${person.firstName}"> </span>
+			      		<span th:text="${person.lastName}"> </span>
+			      		<span th:text="${person.jobTitle}"> </span>
+			      		<span th:text="${person.email}"> </span>
+			      		<span th:text="${person.registration.breakoutRoom}"> </span>
+			      	</td>
+			      </tr>
+		      	</th:block>
+		    </th:block>
+		  	</tbody>
+		</table>
+	</div>
+	</body>
+</html>

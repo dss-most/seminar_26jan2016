@@ -19,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @Entity
-@Table(name="registration")
+@Table(name="person")
 @JsonIdentityInfo( generator = ObjectIdGenerators.PropertyGenerator.class, property="id", scope=Person.class)
 public class Person implements Serializable {
 	/**

@@ -35,7 +35,7 @@ create table registration (
 	id BIGINT not null, 
 	breakoutRoom varchar(255), 
 	person_id BIGINT,
-	creatdTime datetime,
+	createdTime datetime,
 	remark varchar(255),
 	primary key (id)
 );
