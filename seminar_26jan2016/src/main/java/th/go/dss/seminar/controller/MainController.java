@@ -46,6 +46,9 @@ public class MainController {
 		case "Venue":
 			page.setDefaultPanel(0);
 			break;
+		case "Register":
+			page.setDefaultPanel(1);
+			break;
 		case "Contact":
 		case "AboutDSS":
 			page.setDefaultPanel(3);

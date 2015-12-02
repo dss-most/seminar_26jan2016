@@ -5,8 +5,13 @@
   xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="/css/bootstrap.css"  th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.css}" rel="stylesheet" type="text/css"/>
+	
 	<link href="/css/twoColHybLtHdr.css"  th:href="@{/css/twoColHybLtHdr.css}" rel="stylesheet" type="text/css"/>
 
+	<script src="/js/jquery.js" th:src="@{/webjars/jquery/2.1.4/jquery.js}" type="text/javascript"></script>
+	<script src="/js/bootstrap.js" th:src="@{/webjars/bootstrap/3.3.6/js/bootstrap.js}" type="text/javascript"></script>
+	
 	<script src="/SpryAssets/SpryAccordion.js" th:src="@{/SpryAssets/SpryAccordion.js}" type="text/javascript"></script>
 	<link href="/SpryAssets/SpryAccordion.css" th:href="@{/SpryAssets/SpryAccordion.css}" rel="stylesheet" type="text/css" />
 	<title>DSS 125th Anniversary Seminar</title>
@@ -16,7 +21,7 @@
 
 	<div id="container">
 		<div id="header">	
-			<img border="0" src="images/top.jpg" th:src="@{/images/top.jpg}"/>
+			<img border="0" src="images/top.jpg" th:src="@{/images/top-banner.png}"/>
 		</div>
 		
 		<div id="sidebar1">

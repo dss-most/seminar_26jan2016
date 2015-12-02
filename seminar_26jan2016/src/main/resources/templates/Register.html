@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/mainLayout">
+
+	<head>
+	</head>
+	<body>
+	<div layout:fragment="mainContent">
+		<h2> แบบตอบรับการเข้าร่วมงาน</h2>
+		<p>
+			งานครบรอบ ๑๒๕ ปี กรมวิทยาศาสตร์บริการ : รากฐานงานบริการ สู่เศรษฐกิจที่ยั่งยืน <br/>
+			ณ โรงแรมวินด์เซอร์ สวีท แอนด์ คอนเวนชั่น ถนนสุขุมวิท กรุงเทพมหานคร <br/>
+			วันศุกร์ที่ ๒๙ มกราคม ๒๕๕๙ เวลา ๘.๓๐ - ๑๖.๓๐ น. <br/>
+		</p>
+		
+		<form class="form-horizontal">
+		
+		<div class="panel panel-default">
+			 <div class="panel-heading">กรุณากรอกข้อมูลให้ครบถ้วน</div>
+			
+			 <div class="panel-body">
+
+					  <div class="form-group">
+					    <label for="name" class="col-sm-2 control-label">หน่วยงาน</label>
+					    <div class="col-sm-9">
+					      <input type="text" class="form-control" id="nameTxt" data-field="name"/>
+					    </div>
+					  </div>
+				    <div class="form-group" style="margin-bottom: 8px;">
+					    <label for="inputPassword3" class="col-sm-2 control-label">ที่อยู่</label>
+					    <div class="col-sm-9">
+					      <input type="text" class="form-control" id="address1Txt"  data-field="address1"/>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="address2" class="col-sm-2 control-label"></label>
+					    <div class="col-sm-9">
+					      <input type="text" class="form-control" id="address2Txt"  data-field="address2"/>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="telephone" class="col-sm-2 control-label">โทรศัพท์</label>
+					    <div class="col-sm-4">
+					      <input type="text" class="form-control" id="telephoneTxt"  data-field="telephone"/>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="fax" class="col-sm-2 control-label">โทรสาร</label>
+					    <div class="col-sm-4">
+					      <input type="text" class="form-control" id="faxTxt"  data-field="fax"/>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="email" class="col-sm-2 control-label">Email</label>
+					    <div class="col-sm-4">
+					      <input type="text" class="form-control" id="emailTxt"  data-field="email"/>
+					    </div>
+					  </div>
+					  
+					  <div class="form-group">
+					    <label for="email" class="col-sm-2 control-label" style="padding-left:0px;">รหัสลงทะเบียน</label>
+					    <div class="col-sm-4">
+					      <input type="text" class="form-control" id="passwordTxt"  data-field="password"/>
+					    </div>
+					  </div>
+		
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">การร่วมงาน</label>
+						<div class="col-sm-10">
+							<div class="radio">
+								<label> <input type="radio" name="optionsRadios"
+									id="optionsRadios1" value="option1" /> เข้าร่วมงาน (9.30 – 16.30 น.)
+								</label>
+								<label style="margin-left:25px;"> <input type="radio" name="optionsRadios"
+									id="optionsRadios1" value="option1" /> ไม่สามารถเข้าร่วมงานได้
+								</label>
+		
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">ผู้ร่วมงาน</label>
+						<div class="col-sm-10">
+							<div class="radio">
+								<label> <input type="radio" name="optionsRadios"
+									id="optionsRadios1" value="option1" /> 1 ท่าน
+								</label>
+								<label style="margin-left:25px;"> <input type="radio" name="optionsRadios"
+									id="optionsRadios1" value="option1" /> 2 ท่าน
+								</label>
+		
+							</div>
+						</div>
+					</div>
+					
+					<hr />
+					<h4>รายชื่อผู้เข้าร่วมงานคนที่ 1 </h4>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">คำนำหน้า</label>
+						<div class="col-sm-10">
+							<div class="radio">
+								<label> <input type="radio" name="optionsRadios"
+									id="optionsRadios1" value="option1" /> นาย
+								</label>
+								<label style="margin-left:25px;"> <input type="radio" name="optionsRadios"
+									id="optionsRadios1" value="option1" /> นาง
+								</label>
+								<label style="margin-left:25px;"> <input type="radio" name="optionsRadios"
+									id="optionsRadios1" value="option1" /> น.ส.
+								</label>
+								
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="firstName1" class="col-sm-2 control-label">ชื่อ</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="firstName1Txt" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="lastName1" class="col-sm-2 control-label">นามสกุล</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="lastName1Txt" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="title1" class="col-sm-2 control-label">ตำแหน่ง</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="title1Txt" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email1" class="col-sm-2 control-label">email</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="email1Txt"/>
+						</div>
+					</div>
+					
+					<h4>มีความประสงค์เข้าร่วมกลุ่มเสวนาภาคบ่าย (โปรดเลือกเพียง ๑ เวที)</h4>
+					<div class="form-group">
+						<label for="brekoutRoom1" class="col-sm-1 control-label"></label>
+						<div class="col-sm-11">
+							<div class="radio">
+								<label> <input type="radio" name="brekoutRoom1"
+									id="brekoutRoom1Option1" value="ROOM1" />ห้องที่ ๑ งานบริการด้านการรับรองระบบงานห้องปฏิบัติการและการจัดกิจกรรมทดสอบความชำนาญ
+								</label> <br/>
+								<label> <input type="radio" name="brekoutRoom1"
+									id="brekoutRoom1Option2" value="ROOM2" /> ห้องที่ ๒ งานบริการทดสอบ สอบเทียบ
+								</label><br/>
+								<label> <input type="radio" name="brekoutRoom1"
+									id="brekoutRoom1Option3" value="ROOM3" /> ห้องที่ ๓ งานวิจัยและพัฒนา
+								</label><br/>
+								<label> <input type="radio" name="brekoutRoom1"
+									id="brekoutRoom1Option4" value="ROOM4" /> ห้องที่ ๔ งานด้านการพัฒนาบุคคลากรและการบริการสารสนเทศ 
+								</label>
+							</div>
+						</div>
+					
+					</div>
+					
+					<hr />
+					<h4>รายชื่อผู้เข้าร่วมงานคนที่ 2 </h4>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">คำนำหน้า</label>
+						<div class="col-sm-10">
+							<div class="radio">
+								<label> <input type="radio" name="optionsRadios"
+									id="optionsRadios1" value="option1" /> นาย
+								</label>
+								<label style="margin-left:25px;"> <input type="radio" name="optionsRadios"
+									id="optionsRadios1" value="option1" /> นาง
+								</label>
+								<label style="margin-left:25px;"> <input type="radio" name="optionsRadios"
+									id="optionsRadios1" value="option1" /> น.ส.
+								</label>
+								
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="firstName2" class="col-sm-2 control-label">ชื่อ</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="firstName2Txt" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="lastName2" class="col-sm-2 control-label">นามสกุล</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="lastName2Txt" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="title2" class="col-sm-2 control-label">ตำแหน่ง</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="title2Txt" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email2" class="col-sm-2 control-label">email</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="email2Txt"/>
+						</div>
+					</div>
+					
+					<h4>มีความประสงค์เข้าร่วมกลุ่มเสวนาภาคบ่าย (โปรดเลือกเพียง ๑ เวที)</h4>
+					<div class="form-group">
+						<label for="brekoutRoom2" class="col-sm-1 control-label"></label>
+						<div class="col-sm-11">
+							<div class="radio">
+								<label> <input type="radio" name="brekoutRoom2"
+									id="brekoutRoom2Option1" value="ROOM1" />ห้องที่ ๑ งานบริการด้านการรับรองระบบงานห้องปฏิบัติการและการจัดกิจกรรมทดสอบความชำนาญ
+								</label> <br/>
+								<label> <input type="radio" name="brekoutRoom2"
+									id="brekoutRoom2Option2" value="ROOM2" /> ห้องที่ ๒ งานบริการทดสอบ สอบเทียบ
+								</label><br/>
+								<label> <input type="radio" name="brekoutRoom2"
+									id="brekoutRoom2Option3" value="ROOM3" /> ห้องที่ ๓ งานวิจัยและพัฒนา
+								</label><br/>
+								<label> <input type="radio" name="brekoutRoom2"
+									id="brekoutRoom2Option4" value="ROOM4" /> ห้องที่ ๔ งานด้านการพัฒนาบุคคลากรและการบริการสารสนเทศ 
+								</label>
+							</div>
+						</div>
+					
+					</div>
+
+
+			  </div>
+		</div>
+	
+
+ 			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+		
+	</div>
+	</body>
+</html>
