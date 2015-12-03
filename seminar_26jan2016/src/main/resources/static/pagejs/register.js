@@ -145,7 +145,7 @@ var FormView = Backbone.View.extend({
 				method: 'POST',
 				data: JSON.stringify(org),
 				dataType: "json",
-				contentType: "application/json",
+				contentType: "application/json;charset=UTF-8",
 				success: function(data) {
 					if(data == "OK") {
 						$('#submitBtn').hide();
