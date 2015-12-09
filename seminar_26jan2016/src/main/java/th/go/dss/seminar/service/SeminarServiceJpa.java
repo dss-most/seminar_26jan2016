@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import th.go.dss.seminar.model.Organization;
 import th.go.dss.seminar.model.Person;
+import th.go.dss.seminar.model.QOrganization;
 import th.go.dss.seminar.repository.OrganizationRepository;
 import th.go.dss.seminar.repository.PersonRepository;
 import th.go.dss.seminar.repository.RegistrationRepository;
@@ -27,6 +28,14 @@ public class SeminarServiceJpa implements SeminarService {
 	@Autowired
 	private PersonRepository personRepo;
 	
+	
+	
+	@Override
+	public Organization findOrganizationById(Long id) {
+		
+		return orgRepo.findOne(id);
+	}
+
 	@Override
 	public Iterable<Organization> findAllOrganization() {
 		Iterable<Organization> orgs = orgRepo.findAll();
@@ -55,4 +64,12 @@ public class SeminarServiceJpa implements SeminarService {
 
 	}
 
+	@Override
+	public Organization findOrganizationByUsernameAndPassword(String username, String password) {
+		QOrganization q = QOrganization.organization;
+		return orgRepo.findOne(q.username.eq(username).and(q.password.eq(password)));
+	}
+
+	
+	
 }
