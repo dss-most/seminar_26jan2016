@@ -40,10 +40,12 @@ public class MainController {
 		
 		switch(pageName) {
 		case "Home":
-		case "Schedule":
-		case "Venue":
 			page.setDefaultPanel(0);
 			break;
+			
+		case "Schedule":
+			page.setDefaultPanel(2);
+			break;	
 			
 		case "CheckRegistration":
 			Iterable<Organization> orgs = seminarService.findAllOrganization();
@@ -55,6 +57,7 @@ public class MainController {
 			break;
 		case "Contact":
 		case "AboutDSS":
+		case "Venue":	
 			page.setDefaultPanel(3);
 			break;
 		default:
