@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -19,6 +20,8 @@ import th.go.dss.seminar.model.Person;
 import th.go.dss.seminar.model.RegisterStatus;
 import th.go.dss.seminar.model.Registration;
 import th.go.dss.seminar.model.Title;
+import th.go.dss.seminar.model.webui.ResponseJSend;
+import th.go.dss.seminar.model.webui.ResponseStatus;
 import th.go.dss.seminar.service.SeminarService;
 
 @RestController
@@ -30,9 +33,39 @@ public class OrganizationRestController {
 	
 	private Log log = LogFactory.getLog(this.getClass());
 	
+	
+	@RequestMapping(value="/CheckOrganizationPassword", method=RequestMethod.POST)
+	public ResponseJSend<Organization> checkPasswortd(@RequestParam String username, 
+			@RequestParam String password) {
+		Organization org = seminarService.findOrganizationByUsernameAndPassword(username, password);
+		
+		ResponseJSend<Organization> response = new ResponseJSend<Organization>();
+
+		if(org == null) {
+			response.status = ResponseStatus.FAIL;
+			response.data = null;
+		} else {
+			response.status = ResponseStatus.SUCCESS;
+			response.data = org;
+		}
+		
+		return response;
+	}
+	
+	
 	@RequestMapping(value="/Register", method=RequestMethod.POST)
 	public String getRegistration(@RequestBody JsonNode node){
-		Organization org = new Organization();
+		
+		Long id = node.path("id").asLong();
+		
+		Organization org = seminarService.findOrganizationById(id);
+
+		
+		if(org == null) {
+			return "failed"; 
+		} 
+		
+		
 		org.setName(node.path("name").asText());
 		org.setAddress1(node.path("address1").asText());
 		org.setAddress2(node.path("address2").asText());

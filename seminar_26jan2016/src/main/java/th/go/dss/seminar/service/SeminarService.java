@@ -8,4 +8,8 @@ public interface SeminarService {
 
 	Iterable<Organization> findAllOrganization();
 
+	Organization findOrganizationByUsernameAndPassword(String username, String password);
+
+	Organization findOrganizationById(Long id);
+
 }
