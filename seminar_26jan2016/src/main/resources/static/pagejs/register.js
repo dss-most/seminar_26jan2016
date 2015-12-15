@@ -57,7 +57,9 @@ var FormView = Backbone.View.extend({
 			json.model = this.organization;
 			$('#alertDanger').removeClass('alert-danger');
 			$('#alertDanger').addClass('alert-success');
-			$('#alertDanger').html("ท่านได้ลงทะเบียนการสัมมนาแล้ว รายละเอียดด้านล่าง หากมีข้อสงสัยหรือต้องการแก้ไขข้อมูล กรุณาติดต่อกลับ");
+			$('#alertDanger').html("ท่านได้ลงทะเบียนการสัมมนาแล้ว รายละเอียดตามด้านล่าง" + 
+					" สามารถตรวจสอบลำดับการลงทะเบียนหน้างานสัมมนาได้ที่เว็บนี้ ภายใน วันจันทร์ที่ ๑๑ มกราคม ๒๕๕๙" +
+					" หากมีข้อสงสัยหรือต้องการแก้ไขข้อมูล กรุณาติดต่อกลับมาที่อีเมล 125seminar@dss.go.th ภายในวันที่ ๑๒ มกราคม ๒๕๕๙");
 			$('#alertDanger').show();
 			this.$el.find("#formBody").html(this.infoViewTemplate(json));
 		}
@@ -180,7 +182,7 @@ var FormView = Backbone.View.extend({
 				hasError = true;
 			} else if($('input[name="attendingRdo"]:checked').val() == "ATTEND" && 
 					!$('input[name="participantNumberRdo"]:checked').val()) {
-				$('input[name="participantNumberRdo"]').parents('.form-group').addClass('has-error');
+					$('input[name="participantNumberRdo"]').parents('.form-group').addClass('has-error');
 				hasError = true;
 			} else if($('input[name="attendingRdo"]:checked').val() == "ATTEND"){
 				if(!$('input[name="participant1.titleRdo"]:checked').val()) {
@@ -203,7 +205,7 @@ var FormView = Backbone.View.extend({
 						$('input[name="participant2.breakoutRoomRdo"]').parents('.form-group').addClass('has-error');
 						hasError = true;
 					}
-				}
+				}				
 			}
 			
 			if(hasError) {
@@ -256,7 +258,7 @@ var FormView = Backbone.View.extend({
 							$('#submitBtn').hide();
 							$('#alertDanger').removeClass('alert-danger');
 							$('#alertDanger').addClass('alert-success');
-							$('#alertDanger').html("การลงทะเบียนเรียบร้อย ขอบคุณที่ลงทะเบียน");
+							$('#alertDanger').html("การลงทะเบียนเรียบร้อย ขอบคุณท่านที่ลงทะเบียน และท่านสามารถตรวจสอบลำดับการลงทะเบียนหน้างานได้ที่เว็บไซต์นี้ ภายในวันจันทร์ ที่ ๑๑ มกราคม ๒๕๕๙");
 							$('#alertDanger').show();
 						}
 					}
