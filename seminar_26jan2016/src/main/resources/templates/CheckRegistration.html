@@ -14,7 +14,7 @@
 		วันจันทร์ที่ ๑๑  มกราคม ๒๕๕๙</p>
 		
 		<!-- 
-		<table class="table table-bordered">
+			<table class="table table-bordered">
 		  	<thead>
 		  		<tr>
 		  			<td>บริษัท</td>
@@ -31,8 +31,16 @@
 		        <td>
 		        <th:block th:each="person : ${org.people}">
 		        <ol>
-		        	<li>  	<span th:text="${person.firstName}"> </span>
-			      			<span th:text="${person.lastName}"> </span>
+		        	<li>  	<span th:text="${person.firstName}">Onions</span>
+			      			<span th:text="${person.lastName}">Onions</span>
+		        	</li>
+		        </ol>
+		        
+		        <td>
+		        <th:block th:each="person : ${person.registration}">
+		        <ol>
+		        	<li>  	<span th:text="${registration.breakoutRoom}">Onions</span>
+			      			
 		        	</li>
 		        </ol>
 		                
