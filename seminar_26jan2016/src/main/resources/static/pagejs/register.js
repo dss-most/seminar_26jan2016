@@ -239,12 +239,12 @@ var FormView = Backbone.View.extend({
 				
 				if(org.participantNumber == '2') {
 					org.people[1]={};
-					org.people[1].title = $('input[name="participant1.titleRdo"]:checked').val();
-					org.people[1].firstName = $('input[data-field="participant1.firstName"]').val();
-					org.people[1].lastName = $('input[data-field="participant1.lastName"]').val();
-					org.people[1].jobTitle = $('input[data-field="participant1.jobTitle"]').val();
-					org.people[1].email = $('input[data-field="participant1.email"]').val();
-					org.people[1].breakoutRoom = $('input[name="participant1.breakoutRoomRdo"]:checked').val();
+					org.people[1].title = $('input[name="participant2.titleRdo"]:checked').val();
+					org.people[1].firstName = $('input[data-field="participant2.firstName"]').val();
+					org.people[1].lastName = $('input[data-field="participant2.lastName"]').val();
+					org.people[1].jobTitle = $('input[data-field="participant2.jobTitle"]').val();
+					org.people[1].email = $('input[data-field="participant2.email"]').val();
+					org.people[1].breakoutRoom = $('input[name="participant2.breakoutRoomRdo"]:checked').val();
 				}
 				
 				$.ajax({
